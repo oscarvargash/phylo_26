@@ -435,5 +435,5 @@ Check with your instructor or teaching assistant before going further
 
 ### Cheat sheet of linux commands
 
-There are a many commands that we did not cover in this initial tutorial. You can search for basic linux commands in google for aditional ones. A good set of commands can be [downloaded here](https://sites.tufts.edu/cbi/files/2013/01/linux_cheat_sheet.pdf)
+There are a many commands that we did not cover in this initial tutorial. You can search for basic linux commands in google for aditional ones. A good set of commands can be [downloaded here](https://arefiles.ucdavis.edu/uploads/filer_public/ce/8d/ce8d7cfa-2205-406d-90c6-aa0037086d25/useful_linux_commands.pdf)
 
