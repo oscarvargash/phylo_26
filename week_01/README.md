@@ -336,16 +336,16 @@ rm *.txt
 
 > Remove your flag if you are good to continue![](img/green.jpeg)
 
-## Using cat
+### Using cat
 
 > Add the flag to the corner of your screen ![](img/yellow.jpeg)
 
 The terminal is a powerful to run programs, as you can analyze tons of data with only a single command. In this tutorial we will run several aplpications in the terminal and will learn the principles of automatizing data processing.
 
-Please download in your machine a compressed file with the data in the folder named `day_01`:
+Please download in your machine a compressed file with the data in the folder named `week_01`:
 
 ```
-cd ~Documents/day_01
+cd ~Documents/week_01
 wget https://github.com/oscarvargash/phylo_26/raw/main/week_01/files/files.zip
 ```
 
@@ -417,7 +417,7 @@ The following line of code is then able to count the number of `@` in our file, 
 grep -c "@" L008_R1.fastq
 ```
 
-## Exercise 1 
+##  Final Exercise
 
 How many sequences are found in the other three sequence files?
 Add these numbers to a text file in your folder using `nano`
