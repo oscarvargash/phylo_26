@@ -336,6 +336,103 @@ rm *.txt
 
 > Remove your flag if you are good to continue![](img/green.jpeg)
 
+## Using cat
+
+> Add the flag to the corner of your screen ![](img/yellow.jpeg)
+
+The terminal is a powerful to run programs, as you can analyze tons of data with only a single command. In this tutorial we will run several aplpications in the terminal and will learn the principles of automatizing data processing.
+
+Please download in your machine a compressed file with the data in the folder named `day_01`:
+
+```
+cd ~Documents/day_01
+wget https://github.com/oscarvargash/phylo_26/raw/main/week_01/files/files.zip
+```
+
+As you can see, this is a compressed file. We can decompressed by
+
+```
+unzip files.zip
+ls
+```
+
+We can remove now the `.zip` file. How can we remove this files from our folder?
+
+<details>
+  <summary>Click to see an answer!</summary>
+  
+```
+rm files.zip
+```
+
+</details>
+
+
+We can try to get peek in the in the file to see what it is about. Print to the screen the first ten lines of the file by typing using the command `head`:
+
+```
+cat L008_R1.fastq
+```
+
+Since this is a large file, it is not useful to print it to the terminal. In general is always better to only print the top of the file:
+
+```
+head L008_R1.fastq
+```
+
+Or the bottom of the file:
+
+```
+tail L008_R1.fastq
+```
+
+What did you see?
+
+What is this file?
+
+<details>
+  <summary>Click to see an answer!</summary>
+  
+This is file produced by a next-generation squencing run using an Illumina machine. The text after the @ is the name of the sequence, the next line is the sequence itself, the third line is the quality of the sequence. 
+
+</details>
+
+## Solving a problem. We are interested in knowing how many sequeces are found in each file; how can we find out this?
+
+There is a program called `grep` that is able to search for specific words or characters. Furthermore, we know that every sequence in our file starts with `@`.
+
+```
+grep "@" L008_R1.fastq
+```
+
+Let's look at the manual
+
+```
+man grep
+```
+
+The following line of code is then able to count the number of `@` in our file, and therefore the number of sequences in our file:
+
+```
+grep -c "@" L008_R1.fastq
+```
+
+## Exercise 1 
+
+How many sequences are found in the other three sequence files?
+Add these numbers to a text file in your folder using `nano`
+
+The file name should be `sequence_count.txt`
+
+Please follow the following format:
+```L008_R1.fastq 32869```
+
+Check with your instructor or teaching assistant before going further
+
+> Remove your flag if you are good to continue ![](img/green.jpeg)
+
+
+
 ### Cheat sheet of linux commands
 
 There are a many commands that we did not cover in this initial tutorial. You can search for basic linux commands in google for aditional ones. A good set of commands can be [downloaded here](https://sites.tufts.edu/cbi/files/2013/01/linux_cheat_sheet.pdf)
