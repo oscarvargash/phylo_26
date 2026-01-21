@@ -26,7 +26,7 @@ When connected select > Show the remote desktop at its resolution using scroll b
 
 [W-1](https://github.com/oscarvargash/phylo_26/tree/main/week_01) Introduction to bash
 
-[W-2] Executing programs in bash, FastQC, BBtools: BBDuk
+[W-2] (https://github.com/oscarvargash/phylo_26/tree/main/week_02) Executing programs in bash, FastQC, BBtools: BBDuk
 
 [W-3] Mapping reads BBmap, IGV, samtools, GenBank
 
