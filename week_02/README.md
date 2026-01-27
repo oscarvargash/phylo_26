@@ -1,5 +1,8 @@
 # Week two
 
+#### explanation of previous excersise, seq counter
+#### explanation of next generation sequencing
+
 > Add the flag to the corner of your screen ![](img/yellow.jpeg)
 
 To start this tutorial you need to be logged in the Linux virtual machine
@@ -13,8 +16,7 @@ You can also write 'terminal' in the search bar of the main manu located in the 
 
 The terminal is a powerful to run programs, as you can analyze tons of data with only a single command. In this tutorial we will run several aplpications in the terminal and will learn the principles of automatizing data processing.
 
-### Looking at the quality of a file that contains DNA sequences obtanied using high-throughput-sequecing (also known as next-generation-sequencing)
-
+### Downloading data and initial screening of files
 
 Before analysing the quality of the sequences we need to undertand the basics of [next-generation-sequencing](https://www.youtube.com/watch?v=fCd6B5HRaZ8)
 
@@ -33,6 +35,7 @@ As you can see, this is a compressed file. We can decompressed by
 ```
 unzip reads1.zip
 ls
+ls -lh *.gz
 ```
 
 We can remove now the `.zip` file. How can we remove this files from our folder?
@@ -65,7 +68,24 @@ As you can see we are "piping" or passing with `|` the uncompressed text to `hea
 
 What is this file?
 
+### Exercise
+
+Count the number of reads found in each file. Please use wild cards `*`
+
+<details>
+  <summary>ONLY AS A LAST RESOURCE (in case you are feeling lost), Click here to see the commands to analyze the data of this exercise</summary>
+
+```
+zcat *.gz | grep -c "@"
+```
+
+### Using FastQC
+
+
 We can use FastQC to evaluate the quality of the file. First should figure out how does FastQC works. Most programs have a help menu.
+
+
+
 
 ```
 fastqc -help
@@ -87,7 +107,7 @@ Open the file in firefox using the the right clik option "open with." Scroll thr
 
 Congrats!!! you have excuted a program succesfully
 
-### Exercise 1
+### Exercise
 
 Analyze the second file with FastQC. Upon completion of the analysis compare the results (basic statistics and per base sequence quality) and decide which of the files contains better data in terms of quality. Submit your answer in CANVAS along with a brief explanation.
 
@@ -131,7 +151,7 @@ Now that we have removed contaminants we will remove regions of the reads with l
 bbduk.sh in=S1870_L008_R1_001.f.fastq.gz ref=~/../../opt/bbmap/resources/adapters.fa qtrim=lr trimq=20 minlength=21 out=S1870_L008_R1_001.ft.fastq.gz stats=statst1.txt
 ```
 
-`qtrim` indicates where to trim reads, in this case we are trming on both left and right
+`qtrim` indicates where to trim reads, in this case we are triming on both left and right
 
 `trimq` indicates the minimum phred score allowed
 
@@ -139,7 +159,7 @@ bbduk.sh in=S1870_L008_R1_001.f.fastq.gz ref=~/../../opt/bbmap/resources/adapter
 
 > Remove your flag if you are good to continue ![](img/green.jpeg)
 
-### Exercise 2
+### Exercise
 
 Perform the filtering and trimming in the second file `*R2*`. Make sure the file name for the stats is different. Answer the following questions and submit your answers to CANVAS:
 
@@ -149,7 +169,7 @@ Perform the filtering and trimming in the second file `*R2*`. Make sure the file
 
 
 <details>
-  <summary>ONLY AS A LAST RESOURCE (in case you are feeling lost), Click here to see the commands to analyze the data of exercise 2</summary>
+  <summary>ONLY AS A LAST RESOURCE (in case you are feeling lost), Click here to see the commands to analyze the data of this exercise</summary>
   
 ```
 bbduk.sh in=S1870_L008_R2_001.fastq.gz ref=~/../../opt/bbmap/resources/adapters.fa ktrim=r k=21 mink=11 hdist=2 ml=50 out=S1870_L008_R2_001.f.fastq.gz stats=statsf2.txt
