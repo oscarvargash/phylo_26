@@ -86,16 +86,20 @@ Notice that when using wildcards `*` the result is count for the combination of 
 zcat *.gz | grep "@" -c
 ```
 
-
 </details>
 
 ### Using FastQC
 
+We can use FastQC to evaluate the quality of the file. We can check that fastqc is installed in our machine by typing:
 
-We can use FastQC to evaluate the quality of the file. First should figure out how does FastQC works. Most programs have a help menu.
+```
+which fastqc
+```
+
+You can use the same command with native programs like `grep` and `cat`. Notice that all programs are placed in `/usr/bin/`. In our case the executable file with the program has been added to this folder as weell.
 
 
-
+First let's figure out how does FastQC works. Most programs have a help menu. Notice that with non-native programs we can't use `man` (manual). Instead it we will type:
 
 ```
 fastqc -help
@@ -113,7 +117,7 @@ Once it has finish you can list all files and see the output.
 ls
 ```
 
-Open the file in firefox using the the right clik option "open with." Scroll through the results, for the purposes of this lab we will only pay attention to the "basic statistics" and the "per base sequence quality."  
+Open the file in firefox using the the right clik option "open with". Scroll through the results, for the purposes of this lab we will only pay attention to the "basic statistics" and the "per base sequence quality."  
 
 Congrats!!! you have excuted a program succesfully
 
@@ -145,7 +149,8 @@ Now run bbduk:
 bbduk.sh in=S1870_L008_R1_001.fastq.gz ref=~/../../opt/bbmap/resources/adapters.fa ktrim=r k=21 mink=11 hdist=2 ml=50 out=S1870_L008_R1_001.f.fastq.gz stats=statsf1.txt
 ```
 
-`ktrim` indicates which side of the read should be trimmed
+`ktrim` indicates which side of the read should be tr
+immed
 
 `k` indicates the kmer size to look for contaminats, contaminants shorther than K will not be found
 
@@ -187,8 +192,8 @@ bbduk.sh in=S1870_L008_R2_001.fastq.gz ref=~/../../opt/bbmap/resources/adapters.
 bbduk.sh in=S1870_L008_R2_001.f.fastq.gz ref=~/../../opt/bbmap/resources/adapters.fa qtrim=lr trimq=20 minlength=21 out=S1870_L008_R2_001.ft.fastq.gz stats=statst2.txt
 
 
-fastqc S1870_L008_R1_001.ft.fastq.gz -o .
-fastqc S1870_L008_R2_001.ft.fastq.gz -o .
+fastqc *.ft.fastq.gz -o .
+
 ```
 
 </details>
