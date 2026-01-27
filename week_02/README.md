@@ -1,6 +1,6 @@
 # Week two
 
-#### explanation of previous excersise, seq counter
+#### explanation of previous lab excercise, seq counter
 #### explanation of next generation sequencing
 
 > Add the flag to the corner of your screen ![](img/yellow.jpeg)
@@ -177,11 +177,9 @@ bbduk.sh in=S1870_L008_R1_001.f.fastq.gz ref=~/../../opt/bbmap/resources/adapter
 
 Perform the filtering and trimming in the second file `*R2*`. Make sure the file name for the stats is different. Answer the following questions and submit your answers to CANVAS:
 
-1. Which file had more contaminants R1 or R2 (`statsf*`)?
+1. Which file had more contaminants (`#Matched`) R1 or R2 (`statsf*`)?
 
-2. Was there a significant difference in the trimming between R1 and R2 (`statst*`)? briefly explain
-
-3. Compare a FastQC report from am original file against the report of a file that has been both filtered and trimmed `*.ft.`. Describe the differences seeing in "per base sequence quality" graph 
+2. Compare a FastQC report of the two files that have been both filtered and trimmed `*.ft.`, report the "Total Sequences" for each of the files.
 
 <details>
   <summary>ONLY AS A LAST RESOURCE (in case you are feeling lost), Click here to see the commands to analyze the data of this exercise</summary>
