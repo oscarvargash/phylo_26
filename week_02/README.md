@@ -79,6 +79,8 @@ Count the number of reads found in each file. Please use wild cards `*`
 zcat *.gz | grep -c "@"
 ```
 
+</details>
+
 ### Using FastQC
 
 
