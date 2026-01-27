@@ -70,14 +70,22 @@ What is this file?
 
 ### Exercise
 
-Count the number of reads found in each file. Please use wild cards `*`
+Count the number of reads found in each file.
 
 <details>
   <summary>ONLY AS A LAST RESOURCE (in case you are feeling lost), Click here to see the commands to analyze the data of this exercise</summary>
 
 ```
-zcat *.gz | grep -c "@"
+zcat S1870_L008_R1_001.fastq.gz | grep "@" -c
+zcat S1870_L008_R2_001.fastq.gz | grep "@" -c
 ```
+
+Notice that when using wildcards `*` the result is count for the combination of both files. We will learn how to avoid this probem later.
+
+```
+zcat *.gz | grep "@" -c
+```
+
 
 </details>
 
