@@ -149,8 +149,7 @@ Now run bbduk:
 bbduk.sh in=S1870_L008_R1_001.fastq.gz ref=~/../../opt/bbmap/resources/adapters.fa ktrim=r k=21 mink=11 hdist=2 ml=50 out=S1870_L008_R1_001.f.fastq.gz stats=statsf1.txt
 ```
 
-`ktrim` indicates which side of the read should be tr
-immed
+`ktrim` indicates which side of the read should be trimmed
 
 `k` indicates the kmer size to look for contaminats, contaminants shorther than K will not be found
 
@@ -182,6 +181,7 @@ Perform the filtering and trimming in the second file `*R2*`. Make sure the file
 
 2. Was there a significant difference in the trimming between R1 and R2 (`statst*`)? briefly explain
 
+3. Compare a FastQC report from am original file against the report of a file that has been both filtered and trimmed `*.ft.`. Describe the differences seeing in "per base sequence quality" graph 
 
 <details>
   <summary>ONLY AS A LAST RESOURCE (in case you are feeling lost), Click here to see the commands to analyze the data of this exercise</summary>
