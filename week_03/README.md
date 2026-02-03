@@ -1,6 +1,6 @@
 # Week three
 
-### Explain Sanger sequencing
+### Sanger sequencing
 
 ![sanger](https://upload.wikimedia.org/wikipedia/commons/b/b2/Sanger-sequencing.svg)
 
@@ -54,9 +54,11 @@ We will download our reference from GenBank. Our data is a subset of genomic rea
 
 [https://www.ncbi.nlm.nih.gov/genbank/](https://www.ncbi.nlm.nih.gov/genbank/)
 
-In the search bar type:
-
 #### GenBank basics
+
+Notice that in the menu next to the bar there are multiple option for searches. When looking for data for your project you should first select `all` to get an idea of what is there. Feel free to do a couple of searches on your own.
+
+For todays lab please make sure you are searching for `nucelotide`. In the search bar type:
 
 ```
 Diplostephium haenkei internal transcribed spacer
