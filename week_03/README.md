@@ -56,9 +56,9 @@ We will download our reference from GenBank. Our data is a subset of genomic rea
 
 #### GenBank basics
 
-Notice that in the menu next to the bar there are multiple option for searches. When looking for data for your project you should first select `all` to get an idea of what is there. Feel free to do a couple of searches on your own.
+Notice that in the menu next to the bar there are multiple option for searches. When looking for data for your project you should first select `all databases` to get an idea of what is there. Feel free to do a couple of searches on your own. Be aware that scientific papers might have repositories with matrices, meaning that gen bank is not the only place you find data for your project.
 
-For todays lab please make sure you are searching for `nucelotide`. In the search bar type:
+For todays lab please make sure you are searching for `nucleotide`. In the search bar type:
 
 ```
 Diplostephium haenkei internal transcribed spacer
@@ -159,6 +159,6 @@ You should be able to see the mapping now. In a sense, this is an alignment of r
 
 Navigate the mapping in IGV and answer the following questions:
 
-1. Do the reads match exactly the reference?
+1. Do the reads match exactly the reference? Why do you think this is the case?
 2. Identify at least two problematic regions, indicate their coordinates (in base pairs) and why you think these are problematic.
 
