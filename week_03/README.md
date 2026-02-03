@@ -1,6 +1,10 @@
 # Week three
 
-### De novo vs. guided assembly
+### Explain Sanger sequencing
+
+![sanger](https://en.wikipedia.org/wiki/Sanger_sequencing#/media/File:Sanger-sequencing.svg)
+
+### De novo vs. guided assembly in next generation sequencing
 
 > Add the flag to the corner of your screen ![](img/yellow.jpeg)
 
@@ -142,7 +146,7 @@ Load the mapping file `D_azur_sorted.bam`
 2. Click on `Load from File`
 3. Load `D_azur_sorted.bam`
 
-You should be able to see the mapping now
+You should be able to see the mapping now. In a sense, this is an alignment of reads derived from a single sample. This data was subsetted from a file containing reads of genome skimming.
 
 ![](img/igv2.png)
 
