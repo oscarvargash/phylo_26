@@ -1,5 +1,7 @@
 # Week three
 
+### De novo vs. guided assembly
+
 > Add the flag to the corner of your screen ![](img/yellow.jpeg)
 
 To start this tutorial you need to be logged in the Linux virtual machine
@@ -22,20 +24,23 @@ First, let's download the data needed for today's exercise.
 cd Documents
 mkdir week_03
 cd week_03
-wget https://github.com/oscarvargash/biol_550_2024/raw/main/week_03/files/files_w3u.zip
+wget https://github.com/oscarvargash/phylo_26/raw/main/week_03/files/files_w3u.zip
 ```
 
 Let's unzip the data 
 
 ```
 unzip files_w3u.zip
+ls
 ```
+
+What type of data have we downloaded?
 
 > Remove your flag if you are good to continue ![](img/green.jpeg)
 
-### Download reference
+### Download a reference
 
-GenBank is a repository of DNA sequences, it contains (in theory) sequences for every single pusblished study that has use DNA.
+GenBank is a repository of DNA sequences, it contains (in theory) sequences for every single published study that has use DNA.
 
 ![](img/gb.png)
 
@@ -45,12 +50,15 @@ We will download our reference from GenBank. Our data is a subset of genomic rea
 
 [https://www.ncbi.nlm.nih.gov/genbank/](https://www.ncbi.nlm.nih.gov/genbank/)
 
-
 In the search bar type:
+
+#### GenBank basics
 
 ```
 Diplostephium haenkei internal transcribed spacer
 ```
+
+You can also search for this sequence using its accession number. You can search for multiple sequences by typing consecutive accessions separated by a comma.
 
 Click on the first result. This page shows the sequence in GenBank format. A useful format for mapping is the fasta format. To download the seqeuence in fasta format do the following.
 
@@ -101,6 +109,8 @@ Now let's create the bam file:
 ```
 sh bs.sh
 ```
+
+an `*.sh` file is a file that can be executed directly in bash, which is a command-line interpreter and a scripting language.
 
 > Remove your flag if you are good to continue ![](img/green.jpeg)
 
