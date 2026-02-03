@@ -2,7 +2,7 @@
 
 ### Explain Sanger sequencing
 
-![sanger](https://en.wikipedia.org/wiki/Sanger_sequencing#/media/File:Sanger-sequencing.svg)
+![sanger](https://upload.wikimedia.org/wikipedia/commons/b/b2/Sanger-sequencing.svg)
 
 ### De novo vs. guided assembly in next generation sequencing
 
