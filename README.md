@@ -30,7 +30,7 @@ When connected select > Show the remote desktop at its resolution using scroll b
 
 [W-3](https://github.com/oscarvargash/phylo_26/tree/main/week_03) Mapping reads BBmap, IGV, samtools, GenBank
 
-[W-4] (https://github.com/oscarvargash/phylo_26/tree/main/week_03) Alignments, mafft, aliview, bash loops
+[W-4](https://github.com/oscarvargash/phylo_26/tree/main/week_04) Alignments, mafft, aliview, bash loops
 
 W-5 Project presentations
 
