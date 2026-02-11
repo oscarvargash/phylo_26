@@ -96,7 +96,7 @@ We can perform iterative actions in bash easily. An interative action is an acti
 Download the data and unzip it
 
 ```
-wget https://github.com/oscarvargash/biol_550_2024/raw/main/week_04/files/files_4.zip
+wget https://github.com/oscarvargash/phylo_26/raw/main/week_04/files/files_4.zip
 unzip files_4.zip
 ```
 
