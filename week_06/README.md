@@ -176,7 +176,71 @@ export - final_tree.tre;  ! Save result;
 quit
 ```
 
+### Using TNT
 
+TNT claims to have figure algorithms to find better tress quick. We will do a rapid search with this program.
+
+First download the Linux version from the following link:
+
+(TNT)https://www.lillo.org.ar/phylogeny/tnt/
+
+Move an unzip the file in your folder
+
+```
+mv ~/Downloads/tnt-linux.zip .
+unzip tnt-linux.zip
+```
+
+You will see a bunch of files and folders have been created, to see the actaul program move to the `TNT-bin`
+
+```
+cd TNT-bin
+```
+
+We can execute the program here by:
+
+```
+tnt
+help;
+quit
+```
+
+TNT has many options, we will explore the most common search that involves ratchet and tree fusing. Instead of typing every single command we will create a control file for execution in tnt:
+
+```
+nano script.tnt
+```
+
+Copy and past the following commands in to nano:
+
+```
+mxram 50;
+p supermatrix.nexus;
+taxname=;
+hold 100000;
+xmult= rss rat 1000 fuse 100;
+nelsen *;
+export - final_tree.tre;
+
+```
+
+Now close the file and save:
+`ctrl` + `x`
+
+As you can see we also will need the nexus file in this folder:
+
+```
+cp ../supermatrix.nexus .
+```
+
+Now we can open in tnt and execute it:
+
+```
+tnt
+p script.tnt
+```
+
+Compare the results with those from PAUP
 
 ### Exercise
 
