@@ -15,8 +15,8 @@ Make a folder for this week:
 
 ```
 cd Documents
-mkdir week_05
-cd week_05
+mkdir week_06
+cd week_06
 ```
 
 Download data from this lab:
