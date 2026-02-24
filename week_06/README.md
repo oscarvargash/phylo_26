@@ -153,28 +153,20 @@ quit
 Let's examine this treefile as text first:
 
 ```
+cat par.tre
 cat par_con.tre
 ```
 
 A better way to vizualize trees is to use figtree
 
 ```
+figtree par.tre
 figtree par_con.tre
 ```
 
 Figtree will become your best friend. Play with the options to display trees.
 
 > Remove your flag if you are good to continue ![](img/green.jpeg)
-
-
-```
-proc supermatrix.nexus;            ! Load data;
-taxname =;                ! Use names, not numbers;
-xmult=rss rat 5 fuse 5;   ! Run New Technology search;
-nelsen *;                 ! Calculate consensus;
-export - final_tree.tre;  ! Save result;
-quit
-```
 
 ### Using TNT
 
