@@ -197,6 +197,8 @@ help;
 quit
 ```
 
+Make sure you answer `yes` to every a question and `i agree` to the last question.
+
 TNT has many options, we will explore the most common search that involves ratchet and tree fusing. Instead of typing every single command we will create a control file for execution in tnt:
 
 ```
@@ -231,8 +233,11 @@ Now we can open in tnt and execute it:
 tnt
 p script.tnt
 ```
+Compare the results with those from PAUP, then quit
 
-Compare the results with those from PAUP
+```
+quit
+```
 
 ### Exercise
 
