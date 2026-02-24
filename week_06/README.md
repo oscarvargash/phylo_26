@@ -182,7 +182,7 @@ TNT claims to have figure algorithms to find better tress quick. We will do a ra
 
 First download the Linux version from the following link:
 
-(TNT)https://www.lillo.org.ar/phylogeny/tnt/
+[TNT]https://www.lillo.org.ar/phylogeny/tnt/
 
 Move an unzip the file in your folder
 
