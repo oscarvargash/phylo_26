@@ -22,7 +22,7 @@ cd week_05
 Download data from this lab:
 
 ```
-wget https://github.com/oscarvargash/biol_550_2024/raw/main/week_05/files/supermatrix.fasta
+wget https://github.com/oscarvargash/phylo_26/raw/main/week_06/files/supermatrix.fasta
 ```
 
 ### Exporting the data as a nexus file
