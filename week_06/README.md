@@ -79,11 +79,26 @@ execute supermatrix.nexus
 
 You should see a summary of the about the taxa imported.
 
+It is always useful to see all available commands:
+
+```
+help
+help commands
+```
+
 In order to better make sense of trees produced, we will set the outgroup:
 
 ```
+outgroup ?
 outgroup Typha_latifolia
 ```
+
+Will do a heuristic search, so let's see what are our options
+
+```
+hsearch ?
+```
+
 
 Do a parsimony search:
 
@@ -93,7 +108,7 @@ hsearch
 
 When asked about increasing the number of maximum trees, type `y`, then write `200`, and finally type option `2` to avoid this question in the future. At the end of the search you should see a summary of all the trees found.
 
-We can see a single tree by typing
+We can see a single tree by typing (but noticed that 108 trees were found)
 
 ```
 ShowTrees
@@ -106,6 +121,12 @@ ShowTrees ?
 ```
 
 How do we display tree 99?
+
+Now let's save all trees found:
+
+```
+savetrees file = par.tre
+```
 
 Because we have more than a 100 trees, a good strategy is to summarize our results into a concensus tree.
 
@@ -129,15 +150,32 @@ Let's quit paup
 quit
 ```
 
+Let's examine this treefile as text first:
+
+```
+cat par_con.tre
+```
+
 A better way to vizualize trees is to use figtree
 
 ```
 figtree par_con.tre
 ```
 
-Figtree will become your best friend.
+Figtree will become your best friend. Play with the options to display trees.
 
 > Remove your flag if you are good to continue ![](img/green.jpeg)
+
+
+```
+proc supermatrix.nexus;            ! Load data;
+taxname =;                ! Use names, not numbers;
+xmult=rss rat 5 fuse 5;   ! Run New Technology search;
+nelsen *;                 ! Calculate consensus;
+export - final_tree.tre;  ! Save result;
+quit
+```
+
 
 
 ### Exercise
