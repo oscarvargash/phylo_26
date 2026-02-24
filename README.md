@@ -34,7 +34,7 @@ When connected select > Show the remote desktop at its resolution using scroll b
 
 W-5 Project presentations
 
-[W-6] Paup, FigTree, GitHub
+[W-6](https://github.com/oscarvargash/phylo_26/tree/main/week_06) Paup, FigTree
 
 [W-7] IQtree, concatenation
 
