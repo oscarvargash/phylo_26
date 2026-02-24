@@ -1,4 +1,4 @@
-# Week five: building trees using PAUP, GitHub
+# Week Six: building trees using parsimony: PAUP, TNT
 
 > Add the flag to the corner of your screen ![](img/yellow.jpeg)
 
