@@ -34,9 +34,9 @@ When connected select > Show the remote desktop at its resolution using scroll b
 
 W-5 Project presentations
 
-[W-6](https://github.com/oscarvargash/phylo_26/tree/main/week_06) Paup, FigTree
+[W-6](https://github.com/oscarvargash/phylo_26/tree/main/week_06) Paup, TNT, FigTree
 
-[W-7] IQtree, concatenation
+[W-7](https://github.com/oscarvargash/phylo_26/tree/main/week_07) IQtree, concatenation
 
 [W-8] Mr. Bayes
 
@@ -75,6 +75,8 @@ Here is a list of the software associated with the lab. You do not need to insta
 [AliView](https://ormbunkar.se/aliview/)
 
 [PAUP](https://paup.phylosolutions.com/get-paup/)
+
+[TNT]https://www.lillo.org.ar/phylogeny/tnt/
 
 [IQTREE](http://www.iqtree.org/)
 
