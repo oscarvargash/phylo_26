@@ -66,7 +66,7 @@ figtree cluster2434_zing.fasta.mafft.oc.treefile
 
 ### Quick Exercise
 
-Now that we have inferred one tree, infer another gene tree fot the second largest matrix.
+Now that we have inferred one tree, infer another gene tree from the second largest matrix. You will need to look at file sizes to determine which gene to analyze.
 
 <details>
   <summary>Click to see an answer!</summary>
@@ -79,6 +79,7 @@ iqtree2 -bb 1000 -s cluster2784_zing.fasta.mafft.oc
 </details>
 
 Explore the two trees obtanined, do they represent the same relationships?
+*TIP:* to open onther tree in figtree use the drop down file menu from figtree
 
 > Remove your flag if you are good to continue ![](img/green.jpeg)
 
