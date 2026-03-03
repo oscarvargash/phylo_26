@@ -72,7 +72,7 @@ Explore the two trees obtanined, do they represent the same relationships?
 **TIP:** to open onther tree in figtree use the drop down file menu from figtree
 
 <details>
-  <summary>Click to see the paup command</summary>
+  <summary>Click to see the command</summary>
   
 
 ```
@@ -107,11 +107,13 @@ figtree concat.treefile
 
 ### Exercises
 
-1. Look at `concat.best_scheme.nex` using `cat`. What is this?
-2. explore other outputs with the prefix `concat.` produce after the analysis (no response is neceseary here, just look at the files and guess their meaning)
-3. Open the concatenated tree and compare it with the two gene trees calculated before. Make sure bootstrap support are shown in all three trees. What are the differences between the concatenated tree and the gene trees?
-4. Compare the concatenated trees resulted from iqtree and paup. Are they different? explain at least one difference.
-5. Calculate bootstrap support using paup. Compare the output with that of iqtree.
+Please write your answers in your Canvas assignment.
+
+1. Look at `concat.best_scheme.nex` using `cat`. What is this file?
+2. explore other outputs with the prefix `concat.` produced after the analysis (no response is neceseary here, just look at the files and guess their meaning)
+3. Open the concatenated tree and compare it with the two gene trees calculated before. Make sure bootstrap support are shown in all three trees. Describe major differences between the concatenated tree and the gene trees.
+4. Compare the trees resulted from concatenation in iqtree and paup. Are these trees different? explain at least two major differences.
+5. Calculate bootstrap support using paup. Compare the bootstrap outputs between the two concatenated analysis.
 
 
 ```
@@ -149,5 +151,13 @@ for file in *.co; do iqtree2 -bb 1000 -s $file -redo; done
 
 All the DNA regions in this exercise nuclear genome. In some cases it is best to concatenate all genes in a supermatrix that contains all the phylogenetic signal in a single analysis.
 
-You can use [Mesquite](https://www.mesquiteproject.org/Managing%20Molecular%20Data.html#concatMatrices) a program with a graphic interface to perform the concatenation.
+You can use [Mesquite](https://www.mesquiteproject.org/Managing%20Molecular%20Data.html#concatMatrices) a program with a graphic interface to perform the concatenation(the use of Mesquite is only advisable when the number of aligments is 5 or less)
+
+
+Alternatevely you can use iqtree2
+
+```
+iqtree2 -p ./concat/ --out-aln supermatrix2 --out-format NEXUS
+```
+
 
