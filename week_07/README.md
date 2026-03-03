@@ -43,7 +43,7 @@ iqtree2
 Now we can do the test for a single gene
 
 ```
-iqtree2 -s cluster2434_supercontig.fasta.mafft.trim.spur.ts.rd.oc -m MF
+iqtree2 -s cluster2434_zing.fasta.mafft.oc -m MF
 ```
 
 In the output we can see that `iqtree2` perform multiple tests in all the possible models. The [iqtree website](http://www.iqtree.org/doc/) contains useful information for interpreting outputs.
@@ -57,8 +57,8 @@ In the output we can see that `iqtree2` perform multiple tests in all the possib
 `iqtree2` is currently the fastest and more accurate program to infer phylogenies using maximum likelihood. It can do the tree search and infer support statistics for the tree at the same time
 
 ```
-iqtree -bb 1000 -s cluster2434_supercontig.fasta.mafft.trim.spur.ts.rd.oc -redo
-figtree cluster2434_supercontig.fasta.mafft.trim.spur.ts.rd.oc.treefile
+iqtree -bb 1000 -s cluster2434_zing.fasta.mafft.oc -redo
+figtree cluster2434_zing.fasta.mafft.oc.treefile
 ```
 
 Let's clean a bit our folder before the next step:
