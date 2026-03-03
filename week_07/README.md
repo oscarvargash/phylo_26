@@ -24,6 +24,7 @@ Download and unzip data from this lab:
 ```
 wget https://github.com/oscarvargash/phylo_26/raw/main/week_07/files/costus_25_genes.zip
 unzip costus_25_genes.zip
+aliview cluster2434_zing.fasta.mafft.oc
 ```
 
 > Remove your flag if you are good to continue ![](img/green.jpeg)
@@ -40,10 +41,11 @@ First we can see how iqtree operates:
 iqtree2
 ```
 
-Now we can do the test for a single gene
+Now we can do the analysis and test for a single gene
 
 ```
 iqtree2 -s cluster2434_zing.fasta.mafft.oc -m MF
+cat cluster2434_zing.fasta.mafft.oc.treefile
 ```
 
 In the output we can see that `iqtree2` perform multiple tests in all the possible models. The [iqtree website](http://www.iqtree.org/doc/) contains useful information for interpreting outputs.
@@ -57,49 +59,100 @@ In the output we can see that `iqtree2` perform multiple tests in all the possib
 `iqtree2` is currently the fastest and more accurate program to infer phylogenies using maximum likelihood. It can do the tree search and infer support statistics for the tree at the same time
 
 ```
-iqtree -bb 1000 -s cluster2434_zing.fasta.mafft.oc -redo
+iqtree2 -bb 1000 -s cluster2434_zing.fasta.mafft.oc -redo
+cat cluster2434_zing.fasta.mafft.oc.treefile
 figtree cluster2434_zing.fasta.mafft.oc.treefile
 ```
 
-Let's clean a bit our folder before the next step:
+### Quick Exercise
+
+Now that we have inferred one tree, infer another gene tree fot the second largest matrix.
+
+<details>
+  <summary>Click to see an answer!</summary>
+  
 
 ```
-rm *.fasta.*
+iqtree2 -bb 1000 -s cluster2784_zing.fasta.mafft.oc
 ```
 
-Now that we have inferred one tree, we can estimate a tree for every single region provided. we can use a loop:
+</details>
+
+Explore the two trees obtanined, do they represent the same relationships?
+
+> Remove your flag if you are good to continue ![](img/green.jpeg)
+
+### Concatenation in iqtree2
+
+iqtree2 can easily run a concatenated analysis without the need to have a supermatrix (which is nice). First we need to put all the alignments in a single folder and then move the alignments there:
+
+```
+mkdir concat
+mv *.oc ./concat/
+```
+
+now we can run the analysis
+
+```
+iqtree2 -p ./concat/ --prefix concat_na 1000 -T AUTO
+figtree 
+```
+
+Now we can see the results
+
+```
+figtree concat.treefile
+```
+
+### Exercises
+
+1. Look at `concat.best_scheme.nex` using `cat`. What is this?
+2. explore other outputs with the prefix `concat.` produce after the analysis (no response is neceseary here, just look at the files and guess their meaning)
+3. Open the concatenated tree and compare it with the two gene trees calculated before. Make sure bootstrap support are shown in all three trees. What are the differences between the concatenated tree and the gene trees?
+4. Compare the concatenated trees resulted from iqtree and paup. Are they different? explain at least one difference.
+5. Calculate bootstrap support using paup. Compare the output with that of iqtree.
+
+
+```
+cd ~/Documents/week_06
+paup4a168_ubuntu64
+execute supermatrix.nexus
+set maxtrees = 1000 increase = no 
+bootstrap treefile= bs.tre
+```
+
+
+### Optional, loops (this exercise is time consuming for the server)
+
+We can estimate a tree for every single region provided. we can use a loop:
 
 Let's try a simple loop that just print the files we want to analyze:
 
 ```
-for file in *.fasta; do echo $file; done
+for file in *.fasta; do echo $file -redo; done
 ```
 
 We can go one step further and print the commands we want to utilize:
 
 ```
-for file in *.fasta; do echo iqtree -bb 1000 -s $file; done
+for file in *.fasta; do echo iqtree2 -bb 1000 -s $file -redo; done
 ```
 
 This looks pretty good, now write the loop in a way that it will analyze every single alignment:
 
 ```
-for file in *.fasta; do iqtree -bb 1000 -s $file; done
+for file in *.fasta; do iqtree2 -bb 1000 -s $file -redo; done
 ```
 
-Explore the trees obtanined, do they represent the same relationships?
 
-> Remove your flag if you are good to continue ![](img/green.jpeg)
+### Optional, concatenate "manually"
 
-### Runing a supermatrix analysis
-
-> Add the flag to corner of your screen ![](img/yellow.jpeg)
-
-All the DNA regions in this exercise belong to the chloroplast genome. Because this region is a single and large piece of DNA that does not perform recombination, it is safe to assume that a single tree underlies the history of all the chloroplast. In cases like this one it is best to concatenate all genes in a supermatrix that contains all the phylogenetic signal in a single analysis.
+All the DNA regions in this exercise nuclear genome. In some cases it is best to concatenate all genes in a supermatrix that contains all the phylogenetic signal in a single analysis.
 
 first we need to create a supermatrix using a python3 script that concatenates all the files and creates a partition model. Alternatively you can use [Mesquite](https://www.mesquiteproject.org/Managing%20Molecular%20Data.html#concatMatrices) a program with a graphic interface to perform the concatenation(the use of Mesquite is only advisable when the number of aligments is 5 or less)
 
 ```
+wget https://github.com/oscarvargash/phylo_26/raw/main/week_07/files/concatenate_all_fasta.py
 python3 concatenate_all_fasta.py
 ```
 
@@ -113,13 +166,6 @@ cat supermatrix.model
 We now can run the supermatrix analysis:
 
 ```
-iqtree -bb 1000 -s supermatrix.fasta -spp supermatrix.model 
+iqtree2 -bb 1000 -s supermatrix.fasta -spp supermatrix.model
 ```
 
-> Remove your flag if you are good to continue ![](img/green.jpeg)
-
-### Exercise
-
-Open the concatenated tree `supermatrix.model.treefile` and compare it with two gene trees. Make sure bootstrap support are shown in all three trees. What are the differences between the concatenated tree and the gene trees?
-
-Type your answer in the canvas exercise for this lab.
