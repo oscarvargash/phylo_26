@@ -76,7 +76,7 @@ Here is a list of the software associated with the lab. You do not need to insta
 
 [PAUP](https://paup.phylosolutions.com/get-paup/)
 
-[TNT]https://www.lillo.org.ar/phylogeny/tnt/
+[TNT](https://www.lillo.org.ar/phylogeny/tnt/)
 
 [IQTREE](http://www.iqtree.org/)
 

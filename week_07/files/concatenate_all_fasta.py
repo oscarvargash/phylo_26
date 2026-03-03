@@ -17,7 +17,7 @@ from Bio.SeqRecord import SeqRecord
 import pandas as pd
 
 file_pattern = ".fasta"
-all_files = glob.glob('*'+file_pattern)
+all_files = glob.glob('*'+file_pattern+'*')
 
 genes = map(lambda each:each.split('.')[0], all_files)
 

@@ -118,9 +118,9 @@ cd ~/Documents/week_06
 paup4a168_ubuntu64
 execute supermatrix.nexus
 set maxtrees = 1000 increase = no 
-bootstrap treefile= bs.tre
+bootstrap treefile= bs_all.tree
+savetrees file = bs.tree
 ```
-
 
 ### Optional, loops (this exercise is time consuming for the server)
 
@@ -129,19 +129,19 @@ We can estimate a tree for every single region provided. we can use a loop:
 Let's try a simple loop that just print the files we want to analyze:
 
 ```
-for file in *.fasta; do echo $file -redo; done
+for file in *.co; do echo $file -redo; done
 ```
 
 We can go one step further and print the commands we want to utilize:
 
 ```
-for file in *.fasta; do echo iqtree2 -bb 1000 -s $file -redo; done
+for file in *.co; do echo iqtree2 -bb 1000 -s $file -redo; done
 ```
 
 This looks pretty good, now write the loop in a way that it will analyze every single alignment:
 
 ```
-for file in *.fasta; do iqtree2 -bb 1000 -s $file -redo; done
+for file in *.co; do iqtree2 -bb 1000 -s $file -redo; done
 ```
 
 
