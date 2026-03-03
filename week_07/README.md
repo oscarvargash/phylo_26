@@ -68,8 +68,11 @@ figtree cluster2434_zing.fasta.mafft.oc.treefile
 
 Now that we have inferred one tree, infer another gene tree from the second largest matrix. You will need to look at file sizes to determine which gene to analyze.
 
+Explore the two trees obtanined, do they represent the same relationships?
+**TIP:** to open onther tree in figtree use the drop down file menu from figtree
+
 <details>
-  <summary>Click to see an answer!</summary>
+  <summary>Click to see the paup command</summary>
   
 
 ```
@@ -77,9 +80,6 @@ iqtree2 -bb 1000 -s cluster2784_zing.fasta.mafft.oc
 ```
 
 </details>
-
-Explore the two trees obtanined, do they represent the same relationships?
-*TIP:* to open onther tree in figtree use the drop down file menu from figtree
 
 > Remove your flag if you are good to continue ![](img/green.jpeg)
 
@@ -145,28 +145,9 @@ This looks pretty good, now write the loop in a way that it will analyze every s
 for file in *.co; do iqtree2 -bb 1000 -s $file -redo; done
 ```
 
-
-### Optional, concatenate "manually"
+### Optional 2, concatenate "manually" (this subtutorial assumes python 3 is installed along with biopython, pandas, and collections)
 
 All the DNA regions in this exercise nuclear genome. In some cases it is best to concatenate all genes in a supermatrix that contains all the phylogenetic signal in a single analysis.
 
-first we need to create a supermatrix using a python3 script that concatenates all the files and creates a partition model. Alternatively you can use [Mesquite](https://www.mesquiteproject.org/Managing%20Molecular%20Data.html#concatMatrices) a program with a graphic interface to perform the concatenation(the use of Mesquite is only advisable when the number of aligments is 5 or less)
-
-```
-wget https://github.com/oscarvargash/phylo_26/raw/main/week_07/files/concatenate_all_fasta.py
-python3 concatenate_all_fasta.py
-```
-
-Let's check the output files
-
-```
-aliview supermatrix.fasta
-cat supermatrix.model
-```
-
-We now can run the supermatrix analysis:
-
-```
-iqtree2 -bb 1000 -s supermatrix.fasta -spp supermatrix.model
-```
+You can use [Mesquite](https://www.mesquiteproject.org/Managing%20Molecular%20Data.html#concatMatrices) a program with a graphic interface to perform the concatenation.
 
