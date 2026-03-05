@@ -95,7 +95,7 @@ mv *.oc ./concat/
 now we can run the analysis
 
 ```
-iqtree2 -p ./concat/ --prefix concat_na 1000 -T AUTO
+iqtree2 -p ./concat/ --prefix concat_na -bb 1000 -T AUTO
 figtree 
 ```
 
