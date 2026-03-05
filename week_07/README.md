@@ -111,17 +111,22 @@ Please write your answers in your Canvas assignment.
 1. Look at `concat_na.best_scheme.nex` using `cat`. What is this file?
 2. explore other outputs with the prefix `concat_na.` produced after the analysis (no response is neceseary here, just look at the files and guess their meaning)
 3. Open the concatenated tree and compare it with the two gene trees calculated before. Make sure bootstrap support are shown in all three trees. Describe major differences between the concatenated tree and the gene trees.
-4. Compare the trees resulted from concatenation in iqtree and paup. Are these trees different? explain at least two major differences.
-5. Calculate bootstrap support using paup. Compare the bootstrap outputs between the two concatenated analysis.
+4. Compare the trees resulted from concatenation in iqtree and paup (consensus from heuristic search saved as "par_con.tree. Are these trees different? explain at least two major differences.
+5. Calculate bootstrap support using paup. Compare the bootstrap outputs between the two concatenated analysis. you can download the bootstrap tree using:
 
+```
+wget https://github.com/oscarvargash/phylo_26/raw/main/week_07/files/bs.tre
+```
+
+Otherwise you can calculate the bootstrap tree yourself (this might take some time).
 
 ```
 cd ~/Documents/week_06
 paup4a168_ubuntu64
 execute supermatrix.nexus
 set maxtrees = 1000 increase = no 
-bootstrap treefile= bs_all.tree
-savetrees file = bs.tree
+bootstrap treefile= bs_all.tre
+savetrees file = bs.tre
 ```
 
 ### Optional, loops (this exercise is time consuming for the server)
