@@ -101,15 +101,15 @@ iqtree2 -p ./concat/ --prefix concat_na -bb 1000 -T AUTO
 Now we can see the results
 
 ```
-figtree concat.treefile
+figtree concat_na.treefile
 ```
 
 ### Exercises
 
 Please write your answers in your Canvas assignment.
 
-1. Look at `concat.best_scheme.nex` using `cat`. What is this file?
-2. explore other outputs with the prefix `concat.` produced after the analysis (no response is neceseary here, just look at the files and guess their meaning)
+1. Look at `concat_na.best_scheme.nex` using `cat`. What is this file?
+2. explore other outputs with the prefix `concat_na.` produced after the analysis (no response is neceseary here, just look at the files and guess their meaning)
 3. Open the concatenated tree and compare it with the two gene trees calculated before. Make sure bootstrap support are shown in all three trees. Describe major differences between the concatenated tree and the gene trees.
 4. Compare the trees resulted from concatenation in iqtree and paup. Are these trees different? explain at least two major differences.
 5. Calculate bootstrap support using paup. Compare the bootstrap outputs between the two concatenated analysis.
