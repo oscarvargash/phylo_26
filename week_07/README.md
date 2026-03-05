@@ -96,7 +96,6 @@ now we can run the analysis
 
 ```
 iqtree2 -p ./concat/ --prefix concat_na -bb 1000 -T AUTO
-figtree 
 ```
 
 Now we can see the results
