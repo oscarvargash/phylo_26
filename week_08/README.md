@@ -136,15 +136,15 @@ Please submit all your answers to canvas.
 
 Do a Maximum Likelihood analysis of `cp_2_genes.fasta` along with `cp_2_genes.model` using `iqtree2`, make sure every gene has a different partition. Compare the Maximum Likelihood tree against the Bayesian tree and answer the following questions:
 
-1. In terms of relationships among the tips. Do both trees have the same relationships? Give specific examples to support your answer.
+A. In terms of relationships among the tips. Do both trees have the same relationships? Give specific examples to support your answer.
 
-2. In terms of branch lenghts. Do both trees show similar branch lengths? Give specific examples to support your answer.
+B. In terms of branch lenghts. Do both trees show similar branch lengths? Give specific examples to support your answer.
 
-3. In terms of support. Do both trees present similar support values? Give specific examples to support your answer and remember that roughly 70% bootstrap corerspond to 0.95 posterior probability.
+C. In terms of support. Do both trees present similar support values? Give specific examples to support your answer and remember that roughly 70% bootstrap corerspond to 0.95 posterior probability.
 
 ## 2
 
-Do parsimony analysis using `paup` then compare the parsimony results with those of Mr.Bayes. Make suer to make a consensus tree of all most parsimonious trees obtained.
+Do parsimony analysis using `paup` then compare the parsimony results with those of Mr.Bayes. Make sure to make a consensus tree of all most parsimonious trees obtained.
 
-1. In terms of relationships among the tips. Do both trees have the same relationships? Give specific examples to support your answer.
+A. In terms of relationships among the tips. Do both trees have the same relationships? Give specific examples to support your answer.
 
