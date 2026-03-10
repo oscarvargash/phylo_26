@@ -38,15 +38,15 @@ W-5 Project presentations
 
 [W-7](https://github.com/oscarvargash/phylo_26/tree/main/week_07) IQtree, concatenation
 
-[W-8] Mr. Bayes
+[W-8](https://github.com/oscarvargash/phylo_26/tree/main/week_08)  Mr. Bayes
 
 [W-9] Bash scripts, Beauti & the Beast
 
-[W-10] Astral-pro3, GitHub
+[W-10] Astral-pro3
 
 [W-11] Mapping characters
 
-[W-12]Introduction to python
+[W-12] Introduction to python
 
 [W-13] Packages and loops in python
 
