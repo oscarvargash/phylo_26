@@ -126,7 +126,7 @@ wget https://github.com/oscarvargash/phylo_26/raw/main/week_09/files/files2.zip
 unzip files2.zip
 ```
 
-Open tracer and load the `*.log` file
+Open tracer and load both `*.log` files. Notice that the `prior.log` file was run with a file without the data, therefore only the prior was sampled, this is simply so we can compare prior and posterior distributions.
 
 ```
 tracer
