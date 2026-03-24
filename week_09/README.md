@@ -80,7 +80,7 @@ You will see a window:
 ![](img/beauti.png)
 2. Unlink the substitition models by clicking on <kbd>Unlink Subst. Models</kbd> while having both regions being selected
 ![](img/partition.png)
-3. Move to the <kbd>Taxa</kbd> tab and create a taxon set by clicking on <kbd>+</kbd>. Include all the taxa with the exception of Barringtonia. Make this group mononophyletic and add the age of 46. This is the node that will be calibrated to add time to the phylogeny.
+3. Move to the <kbd>Taxa</kbd> tab and create a taxon set by clicking on <kbd>+</kbd>. Include all the taxa with the exception of Barringtonia. Make this group mononophyletic and add the age of 56. This is the node that will be calibrated to add time to the phylogeny.
 ![](img/taxa.png)
 4. Move to the <kbd>Sites</kbd> tab
 ![](img/model.png)
@@ -156,7 +156,7 @@ Congrats you have created your first chronogram!
 
 ### Exercise
 
-1. Based on the chornogram, what is the most recent divergence in the tree? in other words, which species are the most recent to have diverged? Indicate their age and their confidence interval.
+1. Based on the chronogram, what is the most recent divergence in the tree? in other words, which species are the most recent to have diverged? Indicate their age and their confidence interval.
 
 2. What is the age and the confidence interval for of _Bertholletia excelsa_?
 
