@@ -27,7 +27,7 @@ The `.sh` suffix indicates that this script is to be excuted on shell (which is 
 cd Documents
 mkdir week_09
 cd week_09
-wget https://github.com/oscarvargash/phylo_2026/raw/main/week_09/files/files.zip
+wget https://github.com/oscarvargash/phylo_26/raw/main/week_09/files/files.zip
 unzip files.zip
 
 ```
