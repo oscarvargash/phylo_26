@@ -40,15 +40,17 @@ W-5 Project presentations
 
 [W-8](https://github.com/oscarvargash/phylo_26/tree/main/week_08)  Mr. Bayes
 
-[W-9] Bash scripts, Beauti & the Beast
+[W-9](https://github.com/oscarvargash/phylo_26/tree/main/week_09) Bash scripts, Beauti & the Beast
 
-[W-10] Astral-pro3
+[W-10] Astral-pro3, project clinic
 
 [W-11] Mapping characters
 
 [W-12] Introduction to python
 
-[W-13] Packages and loops in python
+[W-13] Introduction to python 2
+
+[W-14] Project clinic
 
 # Instructor:
 
