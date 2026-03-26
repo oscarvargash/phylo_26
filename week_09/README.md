@@ -88,7 +88,7 @@ You will see a window:
 6. Move to the <kbd>Clocks</kbd> tab and select a <kbd>Uncorrelated relaxed clock</kbd>, this models assumes that your tree branches are heterogeneous, a common pattern in most topologies.
 ![](img/clock.png)
 7. Move to the <kbd>Trees</kbd> tab and select a <kbd>Speciation: Yule model</kbd>, this is a simple model of speciation that assumens no significant chages of speciation rate along your tree.
-8. Move to the <kbd>Piors</kbd> tab, click on <kbd>* Using Tree Prior</kbd> in front of `tmrca(untitled0)`; this is the prior for the age of the most recent common ancestor for the taxon set we created in step 3. Because this age was inferred from another publication (secondary calibration), we will use a <kbd>Normal</kbd> distribution with a mean of 46 and standard deviation of 5, which roughly correspond to the same interval found in the paper we are using for this calibration.
+8. Move to the <kbd>Piors</kbd> tab, click on <kbd>* Using Tree Prior</kbd> in front of `tmrca(untitled0)`; this is the prior for the age of the most recent common ancestor for the taxon set we created in step 3. Because this age was inferred from another publication (secondary calibration), we will use a <kbd>Normal</kbd> distribution with a mean of 56 and standard deviation of 5, which roughly correspond to the same interval found in the paper we are using for this calibration.
 ![](img/prior.png)
 9. Go to the <kbd>MCMC</kbd> tab and change the file name stem to: `two_cp_g`. You can see that in this tab you can change all parameters for the MCMC chain.
 10. File go to <kbd>file</kbd> and select <kbd>Generate Beast File</kbd>. Save your file in the week_09 folder.
