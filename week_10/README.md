@@ -32,7 +32,7 @@ for file in *.aln-cln; do iqtree2 -bb 1000 -s $file -m GTR+G; done
 Let's take a look at one tree:
 
 ```
-cat AT5G37830.names.fa.aln-cln.treefile
+figtree AT5G37830.names.fa.aln-cln.treefile
 ```
 
 > Remove your flag if you are good to continue ![](img/green.jpeg)
@@ -65,7 +65,7 @@ We can now see the tree in fig tree:
 figtree nc_astral.tre
 ```
 
-Super-Mega-Congrats you have created your first coaslescent-consistent phylogenetic tree
+Super-Mega-Congrats you have created your first coaslescent-consistent phylogenetic tree. Compare this tree witht the one produced by concatenation (downloaded).
 
 > Remove your flag if you are good to continue ![](img/green.jpeg)
 
