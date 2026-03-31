@@ -42,7 +42,7 @@ W-5 Project presentations
 
 [W-9](https://github.com/oscarvargash/phylo_26/tree/main/week_09) Bash scripts, Beauti & the Beast
 
-[W-10] Astral-pro3, project clinic
+[W-10](https://github.com/oscarvargash/phylo_26/tree/main/week_10) Astral-pro3, project clinic
 
 [W-11] Mapping characters
 
