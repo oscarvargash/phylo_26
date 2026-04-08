@@ -44,7 +44,7 @@ W-5 Project presentations
 
 [W-10](https://github.com/oscarvargash/phylo_26/tree/main/week_10) Astral-pro3, project clinic
 
-[W-11] Mapping characters
+[W-11](https://github.com/oscarvargash/phylo_26/tree/main/week_11) Mapping characters
 
 [W-12] Introduction to python
 
