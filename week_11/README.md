@@ -37,6 +37,7 @@ First we will install all the necessary packages for the analysis:
 ```
 install.packages("phytools")
 install.packages("ggplot2")
+install.packages("igraph")
 ```
 
 Select the line of code and execute by typing <kbd>control</kbd> + <kbd>return</kbd>
