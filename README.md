@@ -46,9 +46,9 @@ W-5 Project presentations
 
 [W-11](https://github.com/oscarvargash/phylo_26/tree/main/week_11) Mapping characters
 
-[W-12] Introduction to python
+[W-12](https://github.com/oscarvargash/phylo_26/tree/main/week_12) Introduction to python
 
-[W-13] Introduction to python 2
+[W-13] Introduction to python
 
 [W-14] Project clinic
 
