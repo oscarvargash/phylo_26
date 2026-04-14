@@ -42,13 +42,6 @@ python3
 
 Now we are in the Python interpreter, you'll notice that there's this **`>>>`**. This is called the Python prompt, in the same way we have the **`$`** when in `bash`. The interpreter uses the prompt to let you know that it is ready for instructions.
 
-```
-Python 3.6.9 (default, Mar 15 2022, 13:55:28) 
-[GCC 8.4.0] on linux
-Type "help", "copyright", "credits" or "license" for more information.
->>>
-```
-
 Let's start with the basics, enter `2 + 2` at the prompt to have Python do some simple math.
 
 ```
