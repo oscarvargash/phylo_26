@@ -174,11 +174,11 @@ Let's start a new script that will look into all fasta files in a folder to summ
 touch genbank_renamer.py
 ```
 
-Now, le's open the file in a text editor, by navigating to it and opening it with the native text editor. It is nice to put the windows next to each other:
+Now, let's open the file in a text editor, by navigating to it and opening it with the native text editor. It is nice to put the windows next to each other:
 
-Just like in R, there are packages available in `python` for al sorts of operations. Packages are called using `import`
+Just like in R, there are packages available in `python3` for al sorts of operations. Packages are called using `import`
 
-Let's copy and paste the following text into our script `fasta_descriptor.py`:
+Let's copy and paste the following text into our script `genbank_renamer.py`:
 
 ```
 #!/usr/bin/env python3
@@ -256,3 +256,8 @@ python3 genbank_renamer.py
 Congratulations you have created your first `python3` script!
 
 > Remove your flag if you are good to continue ![](img/green.jpeg)
+
+### Exercise
+
+Modify the script so the accession number goes first instead of last for the sequence names in the fasta file. Submit the code to CANVAS
+
