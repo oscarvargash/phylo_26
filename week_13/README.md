@@ -57,7 +57,7 @@ parser = argparse.ArgumentParser(description="\
 Script to change codes to names in files, a translation table is necessary to run the scrip. The translation table should be a comma separated value text file, the first column with the codes to be reaplaced by the names in the second column. Written by Oscar Vargas oscarmvargas.com\
 ")
 parser.add_argument("-i", "--input", help="input file/s ending pattern, required", type=str, required = True)
-parser.add_argument("-t", "--translation_table", help="comma separted value table, first column: string to be replaced, second column: replacement, no header")
+parser.add_argument("-t", "--translation_table", help="comma separted value table, first column: string to be replaced, second column: replacement, no header. Required")
 parser.add_argument("-o", "--output_suffix", help="suffix to be added to output file", type=str, default=".rn")
 parser.parse_args()
 args = parser.parse_args()
@@ -82,6 +82,12 @@ First we can print the help by:
 
 ```
 python3 name_replacement.py
+```
+
+We can now execute what we have of the script by adding the required arguments:
+
+```
+python3 name_replacement.py -i concat.tree -t clarkia_codes.txt
 ```
 
 > Remove your flag if you are good to continue ![](img/green.jpeg)
