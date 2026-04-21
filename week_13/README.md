@@ -1,4 +1,4 @@
-# Week thirteen: introduction to loops in python
+# Week thirteen: loops and arguments in python
 
 To start this tutorial you need to be logged in the Linux virtual machine
 [vlinux.humboldt.edu](https://vlinux.humboldt.edu/)
@@ -7,12 +7,11 @@ Once logged in the Linux machine, look for the Terminal, it is an icon that cont
 
 You can also write `terminal` in the search bar of the main manu located in the left bottom of the operating system.
 
-## Inspecting fasta-alignment files for length and number of sequences 
+## Creating a script with arguments for flexibility 
 
 > Add the flag to corner of your screen ![](img/yellow.jpeg)
 
 We will work on a new folder called `week_13`. Open a terminal and navigate to `week-12` folder
-
   
 ```
 cd Documents
@@ -92,10 +91,9 @@ python3 name_replacement.py -i concat.tree -t clarkia_codes.txt
 
 > Remove your flag if you are good to continue ![](img/green.jpeg)
 
+Now we are goint to finish the script adding a loop that interates over every file, and nested on the previous a loop that iterates on each line.
 
 > Add the flag to corner of your screen ![](img/yellow.jpeg)
-
-Now we are goint to finish the script adding a loop that interates over every file, and nested on the previous a loop that iterates on each line.
 
 Please add the following code to your script
 
@@ -124,11 +122,11 @@ print("(∩｀-´)⊃━☆ﾟ.*･｡ﾟ")
 		
 ```
 
-Congratulations you have wrteen your first script with arguments.
+Congratulations, you have written your first script with arguments.
 
 > Remove your flag if you are good to continue ![](img/green.jpeg)
 
 ### Excercise
 Answer the following question:
-Would this script work on fasta file? Please explain your answer carefully indicating why.
+Would this script work on a fasta file? Please explain your answer carefully indicating why.
 
