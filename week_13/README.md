@@ -81,7 +81,7 @@ print(dictionary)
 First we can print the help by:
 
 ```
-python3 name_replacement.py
+python3 name_replacement.py -h
 ```
 
 We can now execute what we have of the script by adding the required arguments:
