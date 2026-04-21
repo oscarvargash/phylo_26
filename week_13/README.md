@@ -38,7 +38,7 @@ touch name_replacement.py
 
 Now, le's open the file in a text editor, by navigating to it and opening it with the native text editor. It is nice to put the windows next to each other. 
 
-Open the script `fasta_descriptor.py` in the text editor next to the terminal window.
+Open the script `name_replacement.py` in the text editor next to the terminal window.
 
 ![](img/python.png)
 
