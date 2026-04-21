@@ -44,6 +44,7 @@ Now, le's open the file in a text editor, by navigating to it and opening it wit
 import glob
 import argparse
 import pandas as pd
+import time
 
 ####### Arguments and help ###########
 parser = argparse.ArgumentParser(description="\
@@ -64,6 +65,10 @@ output_suffix = args.output_suffix
 files = glob.glob("*" + file_suffix)
 table = pd.read_csv(dict_file, header = None)
 dictionary = dict(table.values)
+
+print(files)
+print(table)
+print(dictionary)
 
 ```
 
@@ -86,10 +91,6 @@ from Bio import SeqIO
 And add this to the end of the script to test how to count samples in each fasta file and how many sites are present in the aligment, you can remove and/or "comment out" print lines to avoid cluttering your script.
 
 ```
-print(files)
-print(table)
-print(dictionary)
-
 for file in files:
     print ("working on", file)
     lines = []        
@@ -104,113 +105,20 @@ for file in files:
         for line in lines:
             outfile.write(line)
 
-
 print("finished")
-print("(∩｀-´)⊃/")
-print("(∩｀-´)⊃━")
+print("(∩｀-´)⊃/", end="\r")
+time.sleep(1)
+print("(∩｀-´)⊃━", end="\r")
+time.sleep(1)
 print("(∩｀-´)⊃━☆ﾟ.*･｡ﾟ")
-			
+		
 ```
 
-As you can see, this worked for one single file.
-
-We can now insert this code in the file:
-
-```
-for file in fasta_files:
-    print(file)
-    aln = SeqIO.parse(file, "fasta")   #import alignment
-    #print(aln)
-    counter = 0                        # create a count from 0
-    for seq_record in aln:             # iterate over every seq
-        counter +=1
-    print(counter)
-    seq_len = len(seq_record)         # calculate length
-    print(seq_len)     
-```
-
-We see that our answer is nicely printed to the terminal, a better way of storing these results would be a table that we can save as a file. The module `pandas` is used for this purpose.
-
-Let's add the modeule to our script at the top of the file:
-
-```
-import pandas as pd
-```
-
-Now we can add, before the loop, an empty dataframe where we will store the data from the loop
-
-```
-print("creating dataframe")
-c = ["gene","sequences","length"]
-stats = pd.DataFrame(columns=c)
-print(stats.head)
-```
-
-Now we can add a line in our loop that will populate the dataframe created before the loop. Make sure you add a tab so the code of line so the code is executed in side the loop.
-
-```
-stats = stats._append({"gene":file,"sequences":counter,"length":seq_len}, ignore_index=True)
-```
-
-When the code is executed, we can see that our results are nicely organized. Finally we just need to save it.
-
-```
-stats.to_csv(path_or_buf="gene_stats.csv")
-```
-
-Congrats you have created a useful python script!
-
-Do you have any ideas about how to make this script better?
-
-<details>
-  <summary>If for any reason you need see the final script, please click here</summary>
-  
-```
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
-# code characterize alignments in fasta
-
-import glob
-from Bio import SeqIO
-import pandas as pd
-
-
-fasta_files = (glob.glob)('*.fasta')
-print(fasta_files)
-
-
-print("creating dataframe")
-c = ["gene","sequences","length"]
-stats = pd.DataFrame(columns=c)
-print(stats.head)
-        
-
-for file in fasta_files:
-    print(file)
-    aln = SeqIO.parse(file, "fasta")   #import alignment
-    #print(aln)
-    counter = 0                        # create a count from 0
-    for seq_record in aln:             # iterate over every seq
-        counter +=1
-    print(counter)
-    seq_len = len(seq_record)         # calculate length
-    print(seq_len)
-    stats = stats._append({"gene":file,"sequences":counter,"length":seq_len}, ignore_index=True)     
-
-stats.to_csv(path_or_buf="gene_stats.csv")
-
-```
+Congratulations you have wrteen your first script with arguments.
 
 > Remove your flag if you are good to continue ![](img/green.jpeg)
 
-
-
-
-
-
-
-
-
-
+### Excercise
+Answer the following question:
+Would this script work on fasta file? Please explain your answer carefully indicating why.
 
