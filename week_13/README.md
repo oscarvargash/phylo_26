@@ -36,7 +36,13 @@ start a new script that will look into all fasta files in a folder to summarize 
 touch name_replacement.py
 ```
 
-Now, le's open the file in a text editor, by navigating to it and opening it with the native text editor. It is nice to put the windows next to each other. Copy and paste the following text into our script `name_replacement.py`:
+Now, le's open the file in a text editor, by navigating to it and opening it with the native text editor. It is nice to put the windows next to each other. 
+
+Open the script `fasta_descriptor.py` in the text editor next to the terminal window.
+
+![](img/python.png)
+
+Copy and paste the following text into our script `name_replacement.py`:
 
 ```
 #!/usr/bin/python3
@@ -72,11 +78,14 @@ print(dictionary)
 
 ```
 
+First we can print the help by:
+
+```
+python3 name_replacement.py
+```
+
 > Remove your flag if you are good to continue ![](img/green.jpeg)
 
-Open the script `fasta_descriptor.py` in the text editor next to the terminal window.
-
-![](img/python.png)
 
 > Add the flag to corner of your screen ![](img/yellow.jpeg)
 
@@ -84,11 +93,6 @@ Now we are goint to finish the script adding a loop that interates over every fi
 
 Please add the following code to your script
 
-```
-from Bio import SeqIO
-```
-
-And add this to the end of the script to test how to count samples in each fasta file and how many sites are present in the aligment, you can remove and/or "comment out" print lines to avoid cluttering your script.
 
 ```
 for file in files:
